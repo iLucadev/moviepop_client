@@ -10,10 +10,5 @@ const reducer = combineReducers({
 });
 
 export const store = configureStore({
-  //Reducers
   reducer,
 });
-
-/* {
-  content: contentReducer,
-}, */
