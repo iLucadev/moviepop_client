@@ -14,9 +14,9 @@ const Home = () => {
   console.log(userFavorites);
 
   return (
-    <div className="grow">
+    <div className="grow bg-black">
       <Banner />
-      <div className="px-5 pt-6 space-y-2">
+      <div className="px-6 pt-6 space-y-2">
         <span className="text-white text-md">Your favorites</span>
         <ContentCarrousel elements={userFavorites} />
       </div>

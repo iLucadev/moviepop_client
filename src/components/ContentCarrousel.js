@@ -3,18 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/react";
 import "swiper/css";
 import "./index.css";
+import ContentCard from "./ContentCard";
 
 const ContentCarrousel = ({ elements }) => {
-  const ContentCard = (elem) => {
-    console.log(elem);
-    return (
-      <div
-        className="h-48 w-32 bg-cover rounded-md"
-        style={{ backgroundImage: `url(${elem.element.show.image.original})` }}
-      ></div>
-    );
-  };
-
   return (
     <Swiper spaceBetween={2} slidesPerView={"auto"}>
       {elements.map((item, i) => (

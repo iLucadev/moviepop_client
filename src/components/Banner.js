@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/react";
 import "swiper/css";
+import TagLabel from "./labels/TagLabel";
 
 const Banner = () => {
   const content = useSelector((state) => state.contentReducer);
@@ -61,12 +62,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    );
-  };
-
-  const TagLabel = ({ tag }) => {
-    return (
-      <span className="bg-black border rounded-lg text-xs p-1">{tag}</span>
     );
   };
 
