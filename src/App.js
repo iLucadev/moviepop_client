@@ -1,5 +1,8 @@
 import "./App.css";
+import React, { useEffect } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fetchContent } from "./features/content/contentSlice";
 import Layout from "./layout/Layout";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
@@ -8,6 +11,12 @@ import Content from "./views/Content";
 import ContentDetail from "./views/ContentDetail";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchContent());
+  }, [dispatch]);
+
   return (
     <BrowserRouter>
       <div className="bg-gradient-to-t from-black to-slate-900 h-screen font-nunito overflow-scroll">

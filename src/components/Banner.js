@@ -1,19 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/react";
 import "swiper/css";
 import TagLabel from "./labels/TagLabel";
 
-const Banner = () => {
-  const content = useSelector((state) => state.contentReducer);
-
-  //Get the maxRating
-  const maxRating = Math.max(...content.map((e) => e.show.rating.average));
-  const flagshipContent = content.find(
-    (e) => e.show.rating.average === maxRating
-  );
-
+const Banner = ({ content }) => {
   //Get the content for the carousel
   const top3 = content.slice(0, 3);
 
@@ -38,7 +29,7 @@ const Banner = () => {
         style={{
           height: "520px",
         }}
-        className="bg-gradient-to-t from-black relative"
+        className="relative bg-gradient-to-t from-black"
       >
         <img
           src={element.show.image.original}

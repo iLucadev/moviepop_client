@@ -4,7 +4,7 @@ import ContentCard from "./ContentCard";
 const ContentGrid = ({ elements }) => {
   return (
     <form
-      className="w-full mt-12 px-12"
+      className="w-full mt-12 px-12 mb-6"
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fill, minmax(128px, 1fr))",
