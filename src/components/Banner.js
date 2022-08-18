@@ -3,23 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/react";
 import "swiper/css";
 import TagLabel from "./labels/TagLabel";
+import { removeTags } from "../utils/utils";
 
 const Banner = ({ content }) => {
   //Get the content for the carousel
   const top3 = content.slice(0, 3);
-
-  const removeTags = (str) => {
-    /**
-     * Regular expression to identify HTML tags in the
-     * input string. Replacing the identified HTML tag
-     * with a null string.
-     */
-
-    if (str === null || str === "") return false;
-    else str = str.toString();
-
-    return str.replace(/(<([^>]+)>)/gi, "");
-  };
 
   const CarouselCard = ({ element }) => {
     const tags = element.show.genres;

@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { content } from "../../utils/dummy";
 
 const initialState = {
   loading: false,
   hasError: false,
   content: [],
 };
+
 const APIurl = "http://api.tvmaze.com/search/shows?q=star%20wars";
 
 //Slice for content with our reducers

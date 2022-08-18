@@ -7,7 +7,7 @@ import ContentCard from "./ContentCard";
 
 const ContentCarrousel = ({ elements }) => {
   return (
-    <Swiper spaceBetween={2} slidesPerView={"auto"}>
+    <Swiper spaceBetween={24} slidesPerView={"auto"}>
       {elements.map((item, i) => (
         <SwiperSlide key={i}>
           <ContentCard element={item} />
